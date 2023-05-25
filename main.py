@@ -14,7 +14,7 @@ def z1_2():
                     os.mkdir('new_img')
                 except:
                     pass
-                new_img.save(r'D:\UserFolders\Desktop\для задания'+item)
+                new_img.save(r'D:\UserFolders\Desktop\лаба9\new_img\img_new'+item)
 
 z1_2()
 
@@ -26,5 +26,3 @@ def z3():
     for i in file_reader:
         print(f"{i[0]} - {i[1]} шт. за {i[2]} руб.")
     print(f"Итоговая сумма: {sum([int(i[1]) * int(i[2]) for i in file_reader])} руб.")
-
-#z3()
