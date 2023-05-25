@@ -5,18 +5,18 @@ import csv
 
 def z1_2():
     rez = sorted(os.listdir(path="img"))
-    ex = ['png', 'jpg']
+    ex = ['jpeg', 'jpg']
     for n, item in enumerate(rez):
         if item.split('.')[-1] in ex:
             with Image.open("img/"+item) as img:
                 new_img= img.filter(ImageFilter.EMBOSS)
                 try:
-                    os.mkdir('new_imgs')
+                    os.mkdir('new_img')
                 except:
                     pass
-                new_img.save(r'Z:\1-МД-25\АИП\Федорова Рената\fail 2\new_imgs\img_new'+item)
+                new_img.save(r'D:\UserFolders\Desktop\для задания'+item)
 
-#z1_2()
+z1_2()
 
 
 def z3():
@@ -27,4 +27,4 @@ def z3():
         print(f"{i[0]} - {i[1]} шт. за {i[2]} руб.")
     print(f"Итоговая сумма: {sum([int(i[1]) * int(i[2]) for i in file_reader])} руб.")
 
-z3()
+#z3()
